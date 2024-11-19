@@ -43,56 +43,12 @@
     </dependencies>
 
 
-
-    <repositories>
-        <repository>
-            <id>pundix-snapshots</id>
-            <url>http://nexus-pw.pundix.com:8081/nexus/content/repositories/snapshots/</url>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-                <updatePolicy>always</updatePolicy>
-            </snapshots>
-        </repository>
-    </repositories>
-
-
-    <distributionManagement>
-        <snapshotRepository>
-            <id>pundix-snapshots</id>
-            <url>http://nexus-pw.pundix.com:8081/nexus/content/repositories/snapshots/</url>
-        </snapshotRepository>
-    </distributionManagement>
-
-
     <build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-
-
-            <!-- docker插件 -->
-            <!--            <plugin>-->
-            <!--                <groupId>com.spotify</groupId>-->
-            <!--                <artifactId>docker-maven-plugin</artifactId>-->
-            <!--                <version>1.1.0</version>-->
-            <!--                <configuration>-->
-            <!--                    <imageName>${docker.image.prefix}/${project.artifactId}</imageName>-->
-            <!--                    &lt;!&ndash;docker文件所在的目录&ndash;&gt;-->
-            <!--                    <dockerDirectory>src/main/docker</dockerDirectory>-->
-            <!--                    <resources>-->
-            <!--                        <resource>-->
-            <!--                            <targetPath>/</targetPath>-->
-            <!--                            <directory>${project.build.directory}</directory>-->
-            <!--                            <include>${project.build.finalName}.jar</include>-->
-            <!--                        </resource>-->
-            <!--                    </resources>-->
-            <!--                </configuration>-->
-            <!--            </plugin>-->
         </plugins>
     </build>
 
